@@ -11,18 +11,18 @@ public class Metodos {
 
 	public void navegador(String Url, String navegador) {
 
-		if (navegador == "Chrome" || navegador == "FIREFOX") {
+		if (navegador == "CHROME" || navegador == "FIREFOX") {
 
 			switch (navegador) {
 
-			case "Chrome":
-				System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
+			case "CHROME":
+				System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 				driver = new ChromeDriver();
 				driver.get(Url);
 				break;
 
-			case "Firefox":
-				System.setProperty("webdriver.gecko.driver", "./Drivers/geckochromedriver.exe");
+			case "FIREFOX":
+				System.setProperty("webdriver.gecko.driver", "./Driver/geckochromedriver.exe");
 				driver = new FirefoxDriver();
 				driver.get(Url);
 				break;
@@ -30,7 +30,7 @@ public class Metodos {
 			}
 
 		} else {
-			System.out.println("Navegadores autorizados são: Chrome ou Firefox");
+			System.out.println("Navegadores autorizados sï¿½o: Chrome ou Firefox");
 		}
 
 	}
